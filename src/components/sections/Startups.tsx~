@@ -7,7 +7,7 @@ const posts = [
     views: 100,
     author: {
       _id: 1,
-      name: "Name",
+      name: "Name"
     },
     _id: 1,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -21,7 +21,7 @@ const posts = [
     views: 50,
     author: {
       _id: 2,
-      name: "Name",
+      name: "Name"
     },
     _id: 2,
     description:
@@ -36,7 +36,7 @@ const posts = [
     views: 200,
     author: {
       _id: 1,
-      name: "Name",
+      name: "Name"
     },
     _id: 3,
     description:
@@ -51,7 +51,7 @@ const posts = [
     views: 150,
     author: {
       _id: 3,
-      name: "Name",
+      name: "Name"
     },
     _id: 4,
     description:
@@ -66,7 +66,7 @@ const posts = [
     views: 250,
     author: {
       _id: 2,
-      name: "Name",
+      name: "Name"
     },
     _id: 5,
     description:
@@ -81,7 +81,7 @@ const posts = [
     views: 300,
     author: {
       _id: 1,
-      name: "Name",
+      name: "Name"
     },
     _id: 6,
     description:
