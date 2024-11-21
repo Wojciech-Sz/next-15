@@ -9,6 +9,7 @@ export default async function Home({
   searchParams: Promise<{ query: string }>;
 }) {
   const query = (await searchParams).query;
+
   return (
     <>
       <Hero>
