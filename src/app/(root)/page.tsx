@@ -9,13 +9,13 @@ export default async function Home({
   searchParams: Promise<{ query: string }>;
 }) {
   const query = (await searchParams).query;
-
+  const params = { search: query || null };
   return (
     <>
       <Hero>
         <SearchForm query={query} />
       </Hero>
-      <Startups query={query} />
+      <Startups params={params} />
     </>
   );
 }

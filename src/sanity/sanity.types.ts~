@@ -12,7 +12,7 @@
  * ---------------------------------------------------------------------------------
  */
 
-// Source: schema.json
+
 export type SanityImagePaletteSwatch = {
   _type: "sanity.imagePaletteSwatch";
   background?: string;

@@ -9,7 +9,7 @@
     "lint": "next lint",
     "predev": "pnpm run typegen",
     "prebuild": "pnpm run typegen",
-    "typegen": "sanity schema extract --path=./src/sanity/extract.json && sanity typegen generate"
+    "typegen": "sanity schema extract --path=./src/sanity/schema.json && sanity typegen generate"
   },
   "packageManager": "pnpm@9.12.1",
   "overrides": {
@@ -27,20 +27,17 @@
     "clsx": "^2.1.1",
     "easymde": "^2.18.0",
     "lucide-react": "^0.460.0",
-    "markdown-it": "^14.1.0",
-    "next": "15.0.4-canary.23",
+    "next": "15.0.3",
     "next-sanity": "9.8.3-canary.1",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "sanity": "3",
     "sanity-plugin-markdown": "^5.0.0",
-    "server-only": "^0.0.1",
     "styled-components": "6",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@types/markdown-it": "^14.1.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
