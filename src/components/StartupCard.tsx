@@ -1,9 +1,10 @@
 import React from "react";
-import { formatDate } from "@/lib/utils";
+import { cn, formatDate } from "@/lib/utils";
 import { EyeIcon } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Author, Startup } from "@/sanity/sanity.types";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export type StartupCardType = Omit<Startup, "author"> & { author?: Author };
 
@@ -29,15 +30,15 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
       </div>
 
       <div className={"flex-between mt-5 gap-5"}>
-        <div className={"flex-1"}>
+        <div className={"flex-1 max-w-[70%]"}>
           <Link href={`/user/${author?.name}`}>
             <p className={"text-16-medium line-clamp-1"}>{author?.name}</p>
           </Link>
           <Link href={`/startup/${_id}`}>
-            <h3 className={"text-26-semibold line-clamp-1"}>{title}</h3>
+            <h3 className={"text-26-semibold line-clamp-1 "}>{title}</h3>
           </Link>
         </div>
-        <Link href={`/user/${author?._id}`}>
+        <Link href={`/user/${author?._id}`} className={"shrink-0"}>
           <img
             src={author?.image}
             alt={author?.name || "profile"}
@@ -64,4 +65,14 @@ const StartupCard = ({ post }: { post: StartupCardType }) => {
     </li>
   );
 };
+
+export const StartupCardSkeleton = () => (
+  <>
+    {[0, 1, 2, 3, 4].map((i) => (
+      <li key={cn("skeleton", i)}>
+        <Skeleton />
+      </li>
+    ))}
+  </>
+);
 export default StartupCard;

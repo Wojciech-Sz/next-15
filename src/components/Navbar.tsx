@@ -26,7 +26,9 @@ const Navbar = async () => {
             </Link>
             <UserButton
               appearance={{
-                elements: { userButtonOuterIdentifier: "text-base" },
+                elements: {
+                  userButtonOuterIdentifier: "text-base hidden sm:inline-block",
+                },
               }}
               showName
             />
