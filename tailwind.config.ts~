@@ -30,8 +30,11 @@ const config: Config = {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        background: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
         white: {
           "100": "#F7F7F7",
           DEFAULT: "#FFFFFF",

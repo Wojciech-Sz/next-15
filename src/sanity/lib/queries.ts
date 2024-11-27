@@ -39,3 +39,14 @@ export const STARTUP_BY_ID_QUERY = defineQuery(
     pitch,
   }`,
 );
+
+export const STARTUP_VIEWS_QUERY = defineQuery(`
+*[_type == "startup" && _id == $id][0] {
+    _id,
+    views
+}`);
+
+export const AUTHOR_BY_GITHUBID_QUERY = defineQuery(`
+*[_type == "author" && id == $id][0]{
+_id,id,name,userName,email,image,bio
+}`);

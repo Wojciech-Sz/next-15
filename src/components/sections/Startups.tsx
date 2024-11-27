@@ -9,7 +9,9 @@ const Startups = async ({ params }: { params: { search: string | null } }) => {
     <>
       <section className={"section_container"}>
         <p className={"text-30-semibold"}>
-          {params ? `Search results for "${params.search}"` : "All Startups"}
+          {params.search
+            ? `Search results for "${params.search}"`
+            : "All Startups"}
         </p>
 
         <ul className={"mt-7 card_grid"}>

@@ -7,6 +7,10 @@
 @layer base {
   :root {
     --radius: 0.5rem;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
   }
 }
 
