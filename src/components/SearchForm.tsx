@@ -5,11 +5,11 @@ import { SearchIcon } from "lucide-react";
 
 const SearchForm = ({ query }: { query: string }) => {
   return (
-    <Form action={""} scroll={false} className={"search-form"}>
+    <Form action={"/"} scroll={false} className={"search-form"}>
       <input
         type="text"
         name={"query"}
-        defaultValue={""}
+        defaultValue={query}
         className={"search-input"}
         placeholder={"Search Startup"}
       />

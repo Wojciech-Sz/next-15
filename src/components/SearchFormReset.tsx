@@ -12,7 +12,7 @@ const SearchFormReset = () => {
   };
   return (
     <button type={"reset"} onClick={reset}>
-      <Link href={"/public"} className={"search-btn text-white"}>
+      <Link href={"/"} scroll={false} className={"search-btn text-white"}>
         <XIcon className={"size-5"} />
       </Link>
     </button>
