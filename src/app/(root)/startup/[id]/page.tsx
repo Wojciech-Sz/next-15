@@ -22,10 +22,12 @@ const Page = async ({
 }) => {
   const id = (await params).id;
 
-  const post = await client.fetch(STARTUP_BY_ID_QUERY, { id });
-  const { select: editorPosts } = await client.fetch(PLAYLIST_BY_SLUG_QUERY, {
-    slug: "elo",
-  });
+  const [post] = await Promise.all([
+    client.fetch(STARTUP_BY_ID_QUERY, { id }),
+    // client.fetch(PLAYLIST_BY_SLUG_QUERY, {
+    //   slug: "elo",
+    // }),
+  ]);
 
   if (!post) notFound();
 
