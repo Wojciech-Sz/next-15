@@ -6,7 +6,7 @@ import { redirect } from "next/navigation";
 const Page = async () => {
   const { sessionId } = await auth();
   if (!sessionId) redirect("/");
-  console.log(sessionId);
+
   return (
     <>
       <section className={"pink_container !min-h-[230px]"}>

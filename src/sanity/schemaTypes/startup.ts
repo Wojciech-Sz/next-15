@@ -23,6 +23,7 @@ export const startup = defineType({
     }),
     defineField({
       name: "views",
+      initialValue: 0,
       type: "number",
     }),
     defineField({
