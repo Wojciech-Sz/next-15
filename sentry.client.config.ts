@@ -2,17 +2,17 @@
 // The config you add here will be used whenever a users loads a page in their browser.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-import * as Sentry from "@sentry/nextjs";
+import * as Sentry from '@sentry/nextjs';
 
 Sentry.init({
-  dsn: "https://2773748c0458e982949903b844ce74c6@o1157257.ingest.us.sentry.io/4508370171330560",
+  dsn: 'https://2773748c0458e982949903b844ce74c6@o1157257.ingest.us.sentry.io/4508370171330560',
 
   // Add optional integrations for additional features
   integrations: [
     Sentry.replayIntegration(),
     Sentry.feedbackIntegration({
       // Additional SDK configuration goes in here, for example:
-      colorScheme: "system",
+      colorScheme: 'system',
     }),
   ],
 

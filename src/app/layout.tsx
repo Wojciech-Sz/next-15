@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import "easymde/dist/easymde.min.css";
+import { Analytics } from "@vercel/analytics/react"
 import { Toaster } from "@/components/ui/toaster";
 
 const workSans = localFont({
@@ -71,6 +72,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${workSans.variable} font-sans antialiased`}>
           {children}
+          <Analytics />
           <Toaster />
         </body>
       </html>
