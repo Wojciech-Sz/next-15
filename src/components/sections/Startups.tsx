@@ -1,12 +1,10 @@
 import React from "react";
 import StartupCard, { StartupCardType } from "@/components/StartupCard";
 import { STARTUPS_QUERY } from "@/sanity/lib/queries";
-import { sanityFetch, SanityLive } from "@/sanity/lib/live";
+import { client } from "@/sanity/lib/client";
 
 const Startups = async ({ params }: { params: { search: string | null } }) => {
-  const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
-  const isDevelopment = process.env.NODE_ENV === "development";
-  
+  const posts = await client.fetch(STARTUPS_QUERY, params);
   return (
     <>
       <section className={"section_container"}>
@@ -26,7 +24,6 @@ const Startups = async ({ params }: { params: { search: string | null } }) => {
           )}
         </ul>
       </section>
-      {(isDevelopment || params.search === 'debug') && <SanityLive />}
     </>
   );
 };
