@@ -5,6 +5,8 @@ import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 
 const Startups = async ({ params }: { params: { search: string | null } }) => {
   const { data: posts } = await sanityFetch({ query: STARTUPS_QUERY, params });
+  const isDevelopment = process.env.NODE_ENV === "development";
+  
   return (
     <>
       <section className={"section_container"}>
@@ -24,7 +26,7 @@ const Startups = async ({ params }: { params: { search: string | null } }) => {
           )}
         </ul>
       </section>
-      <SanityLive />
+      {(isDevelopment || params.search === 'debug') && <SanityLive />}
     </>
   );
 };
