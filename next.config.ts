@@ -17,6 +17,20 @@ const nextConfig: NextConfig = {
     buildActivity: true,
     buildActivityPosition: "bottom-right",
   },
+  // Disable Sanity Studio in production to prevent automatic API calls
+  async redirects() {
+    // Only apply redirects in production
+    if (process.env.NODE_ENV === 'production') {
+      return [
+        {
+          source: '/studio/:path*',
+          destination: '/',
+          permanent: false,
+        },
+      ];
+    }
+    return [];
+  },
 };
 
 export default withSentryConfig(nextConfig, {
