@@ -18,7 +18,7 @@ export default async function Home({
       <Hero>
         <SearchForm query={query} />
       </Hero>
-      <Startups params={params} />
+      {/* <Startups params={params} /> */}
     </>
   );
 }
