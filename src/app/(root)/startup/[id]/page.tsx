@@ -33,8 +33,8 @@ const Page = async ({
     ]
   );
 
-  const parsedContent = md.render(post?.pitch || '');
   if (!post) notFound();
+  const parsedContent = md.render(post?.pitch || '');
 
   return (
     <>
