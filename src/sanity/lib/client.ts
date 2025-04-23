@@ -12,7 +12,7 @@ export const client = createClient({
   dataset,
   apiVersion,
   // Disable CDN in production to prevent automatic API calls
-  useCdn: !isProduction,
+  useCdn: true,
   // Disable automatic stale content revalidation in production
   perspective: isProduction ? 'published' : 'previewDrafts',
   // Disable token authentication in production
