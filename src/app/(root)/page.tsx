@@ -3,7 +3,7 @@ import SearchForm from "@/components/SearchForm";
 import React from "react";
 import Startups from "@/components/sections/Startups";
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export default async function Home({
   searchParams,
